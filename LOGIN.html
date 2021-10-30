@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="MyStyle.css">
+<script type="text/javascript">
+function valid(){
+	var aid=document.frm.aid.value;
+	var apas=document.frm.apas.value;
+	if(aid==""){
+		alert("Enter id");
+		return false;
+		}
+	else if(apas==""){
+		alert("Enter password");
+		return false;
+		}
+}
+
+</script>
+
+</head>
+<body>
+<form name="frm" action="UserLogin" onsubmit="return valid()">
+<table style="border: solid;background-color: pink;">
+<tr><th colspan="2">User Login</th></tr>
+<tr><td>Enter  ID :</td><td><input type="text" name="aid"></td></tr>
+<tr><td>Enter  Password :</td><td><input type="password" name="apas"></td></tr>
+<tr><td colspan="2"><input type="submit" value="Login"></td></tr>
+<tr><td><a href="index.html">Back</a></td></tr>
+</table>
+</form>
+</body>
+</html>

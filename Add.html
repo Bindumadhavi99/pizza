@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+table{
+margin-left: auto;
+margin-right: auto;
+}
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: red;
+}
+li{
+float: left;
+}
+li a {
+display: block;
+color: yellow;
+text-align:Neon Green;
+padding: 14px 16px;
+text-decoration: none;
+}
+li a:hover {
+	background-color: black;
+}
+</style>
+<script type="text/javascript">
+function valid(){
+
+	var size=document.frm.size.value;
+	var cost=document.frm.cost.value;
+	if(size==""){
+		alert("Enter Pizza Name");
+		return false;
+		}
+	else if(cost==""){
+		alert("Enter cost");
+		return false;
+		}
+}
+
+</script>
+</head>
+<body>
+<table>
+<tr>
+<td>
+<ul>
+<li><a href="adminhome.html">Home</a></li>
+<li><a href="add.html">Add Pizza </a></li>
+<li><a href="update.html">Modify Pizza</a></li>
+<li><a href="delete.html">Delete Pizza</a></li>
+<li><a href="UpDated menuCard.jsp">Menu Card</a></li>
+<li><a href="allcust.jsp">Customer Info</a></li>
+<li><a href="adminlogin.html">Logout</a></li>
+</ul>
+</td>
+</tr>
+</table >
+<form name="frm" action="AddPizza" onsubmit="return valid()">
+<table border="2" bgcolor="hotpink">
+<tr><th colspan="2">Add New Pizza</th></tr>
+<tr><td>Enter Pizza Name</td><td><input type="text" name="Pizza"></td></tr>
+<tr><td>Enter Cost</td><td><input type="text" name="cost"></td></tr>
+<tr><th colspan="2"><input type="submit" value="Add Item"></th></tr>
+</table>
+
+</form>
+
+</body>
+</html>
